@@ -1,10 +1,11 @@
 .navbar-inverse {
+  margin-bottom: 0;
   background-color: darken($color-dark, 4%);
 
   .navbar-nav {
     > .active > a {
+      transition: background-color .5s;
       background-color: $color-primary-dark;
-      transition: background-color 0.5s;
 
       &:focus,
       &:hover {
@@ -13,7 +14,7 @@
     }
 
     > li > a {
-      transition: background-color 0.5s;
+      transition: background-color .5s;
       @include sm {
         text-align: center;
       }
@@ -50,10 +51,31 @@
     margin-top: 0;
   }
 }
+
 .navbar-header {
   text-align: center;
+
+  &-toggle {
+    float: none;
+    margin-right: 0;
+  }
 }
-.navbar-toggle {
-  float: none;
-  margin-right: 0;
+
+.panel {
+  background: darken($color-light, 8%);
+  border: none;
+  margin-bottom: $gap * 2;
+
+  &-body {
+    border: 1px solid $color-gray;
+    border-radius: 0 0 4px 4px;
+  }
+
+  &-info > .panel-heading {
+    color: $color-light;
+    background-color: $color-accent;
+    font-size: 1.2rem;
+    border: none;
+    letter-spacing: 0.1em;
+  }
 }

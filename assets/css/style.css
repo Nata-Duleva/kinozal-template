@@ -2,15 +2,20 @@
   text-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
 }
 
+.header, .main, .left-sidebar {
+  margin-bottom: 80.0px;
+}
+
 .navbar-inverse {
+  margin-bottom: 0;
   background-color: #191919;
 }
 
 .navbar-inverse .navbar-nav > .active > a {
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
   background-color: #053159;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
 }
 
 .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
@@ -18,9 +23,9 @@
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
@@ -31,9 +36,28 @@
   text-align: center;
 }
 
-.navbar-toggle {
+.navbar-header-toggle {
   float: none;
   margin-right: 0;
+}
+
+.panel {
+  background: #ebebeb;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.panel-body {
+  border: 1px solid #dddddd;
+  border-radius: 0 0 4px 4px;
+}
+
+.panel-info > .panel-heading {
+  color: #fff;
+  background-color: #df8a13;
+  font-size: 1.2rem;
+  border: none;
+  letter-spacing: 0.1em;
 }
 
 html {
@@ -47,32 +71,36 @@ body {
 }
 
 .header-logo {
-  background: #232323;
-  text-align: center;
   padding: 100px 0;
+  text-align: center;
+  background: #232323;
   background-image: url(../img/header-bg.jpg);
   background-position: 50% 50%;
   background-size: cover;
 }
 
 .header-logo__title {
+  font-family: "PT Serif", serif;
   display: block;
   color: #df8a13;
-  font-family: "PT Serif", serif;
 }
 
 .header-logo__description {
-  display: block;
-  color: #ffffff;
   font-size: 1.15rem;
-  letter-spacing: 0.2em;
+  display: block;
+  letter-spacing: .2em;
+  color: #fff;
+}
+
+.left-sidebar .panel:last-of-type {
+  margin-bottom: 0;
 }
 
 @media (min-width: 576px) {
   .header-logo__title {
     font-size: 3.5rem;
-    letter-spacing: 0.33em;
     margin-right: -15px;
+    letter-spacing: .33em;
   }
 }
 
@@ -103,7 +131,7 @@ body {
 @media (max-width: 575.8px) {
   .header-logo__title {
     font-size: 2.5rem;
-    letter-spacing: 0.2em;
     margin-right: -10px;
+    letter-spacing: .2em;
   }
 }

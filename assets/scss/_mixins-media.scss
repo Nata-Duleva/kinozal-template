@@ -1,23 +1,23 @@
 @mixin lg {
-  @media (max-width: $lg - 0.2) {
+  @media (max-width: $lg - .2) {
     @content;
   }
 }
 
 @mixin md {
-  @media (max-width: $md - 0.2) {
+  @media (max-width: $md - .2) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (max-width: $sm - 0.2) {
+  @media (max-width: $sm - .2) {
     @content;
   }
 }
 
 @mixin xs {
-  @media (max-width: $xs - 0.2) {
+  @media (max-width: $xs - .2) {
     @content;
   }
 }
@@ -47,20 +47,20 @@
 }
 
 @mixin lg-md {
-  @media (max-width: $lg - 0.2) and (min-width: $md) {
+  @media (max-width: $lg - .2) and (min-width: $md) {
     @content;
   }
 }
 
 @mixin md-sm {
-  @media (max-width: $md - 0.2) and (min-width: $sm) {
+  @media (max-width: $md - .2) and (min-width: $sm) {
     @content;
   }
 }
 
 
 @mixin sm-xs {
-  @media (max-width: $sm - 0.2) and (min-width: $xs) {
+  @media (max-width: $sm - .2) and (min-width: $xs) {
     @content;
   }
 }
