@@ -1,9 +1,94 @@
 html {
-  font-size: $font-size;
   overflow-y: scroll;
+
+  font-size: $font-size;
 }
 
 body {
   font-family: $font-main;
   font-size: $font-size;
+}
+
+a {
+  transition: color 0.25s, background-color 0.25s;
+
+  color: $color-primary;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    color: $color-accent;
+  }
+}
+
+h1 {
+  font-family: $font-header;
+
+  @include xs-min {
+    margin: (-$gap / 2) 0 ($gap * 3);
+
+    font-size: 3rem;
+  }
+  @include xs {
+    margin: 0 0 ($gap * 2);
+
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-family: $font-header;
+
+  @include xs {
+    margin: 45px 0 30px 45px;
+
+    font-size: 1.75rem;
+  }
+  @include xs-min {
+    margin: 60px 0 45px 45px;
+
+    font-size: 2.5rem;
+  }
+
+  &:before {
+    position: absolute;
+    left: 0;
+
+    width: 30px;
+    height: 3px;
+    margin: 0.25em 0 0 0;
+
+    content: "";
+
+    background-color: #f4c583;
+  }
+}
+
+h1,
+h2 {
+  &:after {
+    position: absolute;
+
+    width: 100%;
+    height: 3px;
+    margin: 0.85em 0 0 15px;
+
+    content: "";
+
+    background-color: #f4c583;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+h3 {
+  @include xs {
+    font-size: 1.25rem;
+  }
+  @include xs-min {
+    font-size: 1.5rem;
+  }
 }

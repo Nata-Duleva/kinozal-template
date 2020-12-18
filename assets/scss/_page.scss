@@ -1,0 +1,39 @@
+section {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.film {
+  &-video {
+    font-size: 1.2em;
+
+    &-well {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &-wrap {
+      white-space: nowrap;
+
+      &:not(:last-of-type) {
+        margin-right: $gap;
+      }
+    }
+
+    &-badge {
+      font-size: 0.8em;
+    }
+  }
+
+  &-comments__btn {
+    float: right;
+  }
+}
+
+.embed-responsive {
+  border: 1px solid $color-gray;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+}
+

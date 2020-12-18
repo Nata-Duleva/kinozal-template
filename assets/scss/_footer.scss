@@ -1,0 +1,29 @@
+.footer {
+  padding-top: 45px;
+
+  color: darken($color-light, 1.5%);
+  background-color: $color-dark;
+
+  ul {
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  a {
+    color: darken($color-light, 53.5%);
+    &:hover {
+      color: $color-light;
+    }
+  }
+
+  &-block__5 {
+    margin: 20px 0;
+
+    text-align: center;
+
+    a {
+      color: darken($color-light, 1.5%);
+    }
+  }
+}
